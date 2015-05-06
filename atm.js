@@ -1,5 +1,6 @@
 $(document).ready(function(){
  var balance = 0
+ var deposit = 0
 
 // deposits #amount1 to #balance1, does not store
   $('#deposit1').click(function(){
@@ -11,9 +12,9 @@ $(document).ready(function(){
 
 //withdraws and deposits inputted balance and updates new balance
   $('#withdraw1').click(function(){
-   withdraw = $('#amount1').val();
+   var withdraw = parseInt($('#amount1').val())
    balance = balance - withdraw;
-   $('#balance1').html(parseInt(balance));
+   $('#balance1').html(balance);
   })
    })
 
