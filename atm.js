@@ -1,17 +1,19 @@
 $(document).ready(function(){
- var balance = ''
+ var balance = 0
 
 // deposits #amount1 to #balance1, does not store
   $('#deposit1').click(function(){
-  $('#balance1').html($('#amount1').val());
-   balance = $('#amount1');
+    var deposit1 = parseInt($('#amount1').val())
+    balance = balance + deposit1
+    $('#balance1').html(balance);
+   // balance = $('#amount1');
    })
 
 //withdraws and deposits inputted balance and updates new balance
   $('#withdraw1').click(function(){
    withdraw = $('#amount1').val();
    balance = balance - withdraw;
-   $('#balance1').html(balance);
+   $('#balance1').html(parseInt(balance));
   })
    })
 
