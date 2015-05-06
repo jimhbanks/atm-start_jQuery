@@ -7,7 +7,7 @@ $(document).ready(function(){
    balance = $('#amount1');
    })
 
-//withdraws inputted balance and updates new balance
+//withdraws and deposits inputted balance and updates new balance
   $('#withdraw1').click(function(){
    withdraw = $('#amount1').val();
    balance = balance - withdraw;
@@ -15,7 +15,18 @@ $(document).ready(function(){
   })
    })
 
+// below is not working
+  $('#deposit2').click(function(){
+  $('#balance2').html($('#amount2').val());
+   balance = $('#amount1');
+   })
 
+$('#withdraw2').click(function(){
+   withdraw = $('#amount2').val();
+   balance = balance - withdraw;
+   $('#balance2').html(balance);
+   debugger;
+   })
  
 
 
